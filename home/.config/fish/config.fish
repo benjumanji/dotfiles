@@ -3,21 +3,6 @@ set -x PATH ~/.cabal/bin $PATH
 set -x PATH ~/bin $PATH
 set -x EDITOR vim
 
-function fish_prompt
-    set_color blue
-    echo -n (whoami)
-    set_color yellow
-    echo -n '@'
-    set_color blue
-    echo -n (hostname)
-    echo -n ' '
-    set_color cyan
-    echo -n (prompt_pwd)
-    echo -n ' '
-    set_color yellow
-    echo -n '$ '
-    set_color normal
-end
 
 function paci
     sudo pacman -S $argv
