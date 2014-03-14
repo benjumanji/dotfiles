@@ -10,11 +10,16 @@ function fish_prompt
     echo -n ' '
     set_color cyan
     echo -n (prompt_pwd)
-    if (_git_branch_name)
+    if [ (_git_branch_name) ]
+        set_color blue 
         echo -n ' ('
+        set_color --bold red
         echo -n (_git_branch_name)
-        echo -n ') '
+        set_color normal
+        set_color blue
+        echo -n ')'
     end
+    echo ''
     set_color yellow
     echo -n '$ '
     set_color normal
