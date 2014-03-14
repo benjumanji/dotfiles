@@ -1,4 +1,8 @@
-set shell=/usr/bin/bash
+if filereadable("/usr/bin/bash")
+    set shell=/usr/bin/bash
+else
+    set shell=/bin/bash
+endif
 
 call pathogen#infect()
 syntax on
