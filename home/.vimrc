@@ -1,7 +1,8 @@
+set shell=/usr/bin/bash
+
 call pathogen#infect()
 syntax on
 filetype plugin indent on
-set shell=/usr/bin/bash
 
 " let g:zenburn_transparent = 1
 " colors zenburn
