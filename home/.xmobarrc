@@ -1,0 +1,15 @@
+Config { font = "xft:Inconsolata:size=10"
+       , bgColor = "#101010"
+       , fgColor = "#dcdccc"
+       , position = Static { xpos = 1920, ypos = 0, width = 1870, height = 25 }
+       , lowerOnStart = True
+       , commands = [ Run MultiCpu ["-t", "Cpu: <autototal>"] 10
+                    , Run Memory ["-t","Mem: <usedratio>%"] 10
+                    , Run Network "enp4s0" ["-t", "<dev>:[rx <rx> | tx <tx>]"] 10
+                    , Run Date "%a %b %_d %l:%M" "date" 10
+                    , Run StdinReader
+                    ]
+       , sepChar = "%"
+       , alignSep = "}{"
+       , template = "%StdinReader% }{ %multicpu%   %memory%   %enp4s0% <fc=#e89393>%date%</fc>"
+       }
