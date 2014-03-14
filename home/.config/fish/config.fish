@@ -16,7 +16,9 @@ function pacu
     sudo pacman -Syuu
 end
 
-eval (dircolors -c ~/.dir_colors/dircolors.ansi-dark )
+if test -d ~/.dir_colors
+    eval (dircolors -c ~/.dir_colors/dircolors.ansi-dark )
+end
 
 set -l base03  002b36
 set -l base02  073642
@@ -69,4 +71,4 @@ set -g fish_color_hostname    $cyan
 set -g fish_color_cwd         $yellow
 set -g fish_color_git         $green
 
-source "$HOME/.homesick/repos/homeshick/homeshick.fish"
+. "$HOME/.homesick/repos/homeshick/homeshick.fish"
