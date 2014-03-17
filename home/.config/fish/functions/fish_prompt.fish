@@ -1,7 +1,5 @@
 #prompt
 
-
-
 function fish_prompt
     set -l blue (set_color blue)
     set -l yellow (set_color yellow)
@@ -18,6 +16,6 @@ function fish_prompt
         set -l git_branch $orange(_git_branch_name)$normal
         printf "%s%s%s " "$blue(" $git_branch "$blue)"
     end
-    printf "%s\$\n %s" $yellow $normal
+    printf "%s\n\$ %s" $yellow $normal
 end
 
