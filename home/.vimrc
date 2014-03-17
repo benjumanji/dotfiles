@@ -5,6 +5,7 @@ syntax on
 filetype plugin indent on
 
 set relativenumber
+set laststatus=2
 
 
 " let g:zenburn_transparent = 1
@@ -14,8 +15,9 @@ set relativenumber
 set background=dark
 colors solarized
 let g:solarized_termtrans = 1
+let g:airline_powerline_fonts = 1
 
-hi Normal             ctermbg=NONE     
+hi Normal             ctermbg=NONE
 hi Statement          ctermbg=NONE
 hi Title              ctermbg=NONE
 hi Todo               ctermbg=NONE
