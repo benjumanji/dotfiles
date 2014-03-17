@@ -8,6 +8,9 @@ call pathogen#infect()
 syntax on
 filetype plugin indent on
 
+set relativenumber
+
+
 " let g:zenburn_transparent = 1
 " colors zenburn
 
