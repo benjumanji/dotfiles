@@ -53,6 +53,10 @@ let maplocalleader = "\\"
 nnoremap <leader>ev :split $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
+" toggle quicklist / location list
+nmap <script> <silent> <leader>l :call ToggleLocationList()<CR>
+nmap <script> <silent> <leader>q :call ToggleQuickfixList()<CR>
+
 ""misc
 nnoremap <leader>c ddO
 inoremap jk <esc>
