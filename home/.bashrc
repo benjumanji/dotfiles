@@ -5,4 +5,4 @@
 [[ $- != *i* ]] && return
 
 # If interactive, run fish 
-[[ $- == *i* && -x $(which fish) ]] && fish --login
+#[[ $- == *i* && -x $(which fish) ]] && fish --login

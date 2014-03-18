@@ -18,7 +18,7 @@ import XMonad.Util.Run(spawnPipe, safeSpawn, unsafeSpawn)
 import XMonad.Util.WorkspaceCompare(getSortByXineramaPhysicalRule)
 
 main :: IO ()
-main = do 
+main = do
     xmproc <- spawnPipe "/usr/bin/xmobar ~/.xmobarrc"
     safeSpawn "trayer" trayerArgs
     safeSpawn "xcompmgr" []
@@ -29,19 +29,19 @@ main = do
         , layoutHook = avoidStruts $ layout
         , logHook = xmoLoghook xmproc
         , modMask = mod4Mask
-        , terminal = "urxvt"
+        , terminal = "SHELL=/usr/bin/fish urxvt"
         , borderWidth = 2
         , focusedBorderColor = "#606060"
         , normalBorderColor = "#101010"
         } `additionalKeys`
-        [ ((mod4Mask, xK_Right), nextScreen) 
+        [ ((mod4Mask, xK_Right), nextScreen)
         , ((mod4Mask, xK_Left), prevScreen)
         , ((mod4Mask .|. shiftMask, xK_Right), shiftNextScreen)
         , ((mod4Mask .|. shiftMask, xK_Left), shiftPrevScreen)
         ]
 
 layout :: ModifiedLayout Spacing Tall a
-layout = spacing 3 $ Tall nmaster delta ratio 
+layout = spacing 3 $ Tall nmaster delta ratio
   where
     nmaster = 1
     ratio = 1 / 2
@@ -54,11 +54,11 @@ xmoLoghook h = dynamicLogWithPP $ xmobarPP
     , ppLayout = const ""
     , ppVisible = xmobarColor "#dcdccc" "" . wrap "(" ")"
     , ppCurrent = xmobarColor "#f0dfaf" "" . wrap "[" "]"
-    , ppSort = getSortByXineramaPhysicalRule 
+    , ppSort = getSortByXineramaPhysicalRule
     }
 
 trayerArgs :: [String]
-trayerArgs = 
+trayerArgs =
     [ "--edge", "top"
     , "--align", "right"
     , "--widthtype", "pixel"
