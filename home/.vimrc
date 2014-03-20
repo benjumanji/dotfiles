@@ -98,6 +98,9 @@ autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
 " <TAB>: completion.
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 
+" airline stuff
+let g:airline#extensions#tabline#enabled = 1
+
 " unite stuff
 nnoremap <C-p> :Unite file_rec/async<CR>
 nnoremap <Space>/ :Unite grep:.<CR>
