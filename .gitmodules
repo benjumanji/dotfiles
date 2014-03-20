@@ -34,3 +34,6 @@
 [submodule ".vim/bundle/vim-togglelist"]
 	path = .vim/bundle/vim-togglelist
 	url = https://github.com/milkypostman/vim-togglelist.git
+[submodule ".vim/bundle/vim-easymotion"]
+	path = .vim/bundle/vim-easymotion
+	url = https://github.com/Lokaltog/vim-easymotion.git
