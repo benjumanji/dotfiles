@@ -57,6 +57,9 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 nmap <script> <silent> <leader>l :call ToggleLocationList()<CR>
 nmap <script> <silent> <leader>q :call ToggleQuickfixList()<CR>
 
+" removetrailing whitespace
+nnoremap <silent> <leader>rw :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
+
 ""misc
 nnoremap <leader>c ddO
 inoremap jk <esc>
