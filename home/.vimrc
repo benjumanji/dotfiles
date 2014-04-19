@@ -98,3 +98,6 @@ let g:airline#extensions#tabline#enabled = 1
 " unite stuff
 nnoremap <C-p> :Unite file_rec/async<CR>
 nnoremap <Space>/ :Unite grep:.<CR>
+
+" nerd tree
+nnoremap <C-n> :NERDTreeToggle<CR>
