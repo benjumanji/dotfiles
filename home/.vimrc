@@ -53,10 +53,6 @@ let maplocalleader = "\\"
 nnoremap <leader>ev :split $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
-" toggle quicklist / location list
-nmap <script> <silent> <leader>l :call ToggleLocationList()<CR>
-nmap <script> <silent> <leader>q :call ToggleQuickfixList()<CR>
-
 " removetrailing whitespace
 nnoremap <silent> <leader>rw :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
 
@@ -71,15 +67,13 @@ nnoremap L $
 vnoremap H ^
 vnoremap L $
 
-" ghc mod
-" augroup haskGroup
-"     autocmd!
-"     autocmd BufNewFile,BufRead *.hs call hsf#SetGhcPackagePath()
-"     autocmd BufNewFile,BufRead *.hs call hsf#SetTags()
-" augroup END
+" haskell
+augroup haskGroup
+    autocmd!
+    " for hothasktags
+    au BufNewFile,BufRead *.hs :set iskeyword=a-z,A-Z,_,.,39,48-57
+augroup END
 
-" for hothasktags
-set iskeyword=a-z,A-Z,_,.,39
 
 " neocomplcache
 let g:neocomplcache_enable_at_startup = 1
