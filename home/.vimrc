@@ -72,15 +72,15 @@ augroup haskGroup
     autocmd!
     " for hothasktags
     au BufNewFile,BufRead *.hs :set iskeyword=a-z,A-Z,_,.,39,48-57
+    " show types in autocomplete
+    au BufNewFile,BufRead *.hs :let g:necoghc_enable_detailed_browse = 1
 augroup END
 
 
 " neocomplcache
-let g:neocomplcache_enable_at_startup = 1
+let g:neocomplete#enable_at_startup = 1
 " Sets minimum char length of syntax keyword.
-let g:neocomplcache_min_syntax_length = 3
-" neco-ghc
-let g:necoghc_enable_detailed_browse = 1
+let g:neocomplete#sources#syntax#min_keyword_length = 3
 
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
@@ -101,3 +101,20 @@ nnoremap <Space>/ :Unite grep:.<CR>
 
 " nerd tree
 nnoremap <C-n> :NERDTreeToggle<CR>
+
+let g:toggle_list_restore = 0
+
+" hdevtools
+function! FindCabalSandboxRoot()
+    return finddir('.cabal-sandbox', './;')
+endfunction
+
+function! FindCabalSandboxRootPackageConf()
+    return glob(FindCabalSandboxRoot().'/*-packages.conf.d')
+endfunction
+
+let g:hdevtools_options = '-g-ilib -g-isrc -g-i. -g-idist/build/autogen -g-Wall -g-package-conf='.FindCabalSandboxRootPackageConf()
+
+"syntastic
+let g:syntastic_haskell_checkers = ['hdevtools']
+let g:syntastic_always_populate_loc_list = 1
