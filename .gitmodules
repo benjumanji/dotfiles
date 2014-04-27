@@ -1,12 +1,3 @@
-[submodule ".vim/bundle/neco-ghc"]
-	path = .vim/bundle/neco-ghc
-	url = https://github.com/eagletmt/neco-ghc.git
-[submodule ".vim/bundle/neocomplcache.vim"]
-	path = .vim/bundle/neocomplcache.vim
-	url = https://github.com/Shougo/neocomplcache.vim.git
-[submodule ".vim/bundle/ghcmod-vim"]
-	path = .vim/bundle/ghcmod-vim
-	url = https://github.com/eagletmt/ghcmod-vim.git
 [submodule ".vim/bundle/syntastic"]
 	path = .vim/bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
@@ -46,3 +37,12 @@
 [submodule ".vim/bundle/nerdtree"]
 	path = .vim/bundle/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
+[submodule ".vim/bundle/vim-hdevtools"]
+	path = .vim/bundle/vim-hdevtools
+	url = https://github.com/bitc/vim-hdevtools.git
+[submodule ".vim/bundle/neocomplete.vim"]
+	path = .vim/bundle/neocomplete.vim
+	url = https://github.com/Shougo/neocomplete.vim.git
+[submodule ".vim/bundle/neco-ghc"]
+	path = .vim/bundle/neco-ghc
+	url = https://github.com/eagletmt/neco-ghc.git
