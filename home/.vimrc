@@ -104,17 +104,6 @@ nnoremap <C-n> :NERDTreeToggle<CR>
 
 let g:toggle_list_restore = 0
 
-" hdevtools
-function! FindCabalSandboxRoot()
-    return finddir('.cabal-sandbox', './;')
-endfunction
-
-function! FindCabalSandboxRootPackageConf()
-    return glob(FindCabalSandboxRoot().'/*-packages.conf.d')
-endfunction
-
-let g:hdevtools_options = '-g-ilib -g-isrc -g-i. -g-idist/build/autogen -g-Wall -g-package-conf='.FindCabalSandboxRootPackageConf()
-
 "syntastic
-let g:syntastic_haskell_checkers = ['hdevtools']
+" let g:syntastic_haskell_checkers = ['ghc-mod']
 let g:syntastic_always_populate_loc_list = 1
