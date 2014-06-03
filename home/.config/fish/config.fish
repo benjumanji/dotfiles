@@ -2,7 +2,7 @@ set fish_greeting
 set -x PATH ~/.cabal/bin $PATH
 set -x PATH ~/bin $PATH
 set -x EDITOR vim
-
+set -x GPG_TTY (tty)
 
 function paci
     sudo pacman -S $argv
