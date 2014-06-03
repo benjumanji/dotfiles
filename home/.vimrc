@@ -98,6 +98,10 @@ let g:airline#extensions#tabline#enabled = 1
 " unite stuff
 nnoremap <C-p> :Unite file_rec/async<CR>
 nnoremap <Space>/ :Unite grep:.<CR>
+nnoremap <Space>s :Unite buffer<CR>
+if executable('ag')
+    let g:unite_source_rec_async_command = 'ag --nocolor --nogroup --hidden -g ""'
+endif
 
 " nerd tree
 nnoremap <C-n> :NERDTreeToggle<CR>
