@@ -96,9 +96,9 @@ inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 let g:airline#extensions#tabline#enabled = 1
 
 " unite stuff
-nnoremap <C-p> :Unite file_rec/async<CR>
+nnoremap <C-p> :Unite -start-insert file_rec/async<CR>
 nnoremap <Space>/ :Unite grep:.<CR>
-nnoremap <Space>s :Unite buffer<CR>
+nnoremap <leader>b :Unite -quick-match buffer<CR>
 if executable('ag')
     let g:unite_source_rec_async_command = 'ag --nocolor --nogroup --hidden -g ""'
 endif
