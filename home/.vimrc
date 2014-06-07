@@ -13,8 +13,8 @@ set laststatus=2
 
 "colors
 set background=dark
-colors solarized
-let g:solarized_termtrans = 1
+colorscheme lucius
+let g:lucius_no_term_bg = 1
 let g:airline_powerline_fonts = 1
 
 hi Normal             ctermbg=NONE
