@@ -1,3 +1,4 @@
+set nocompatible
 set shell=/bin/bash
 
 call pathogen#infect()
@@ -16,14 +17,13 @@ set background=dark
 colorscheme lucius
 let g:lucius_no_term_bg = 1
 let g:airline_powerline_fonts = 1
+let g:airline_theme = 'lucius'
 
 hi Normal             ctermbg=NONE
 hi Statement          ctermbg=NONE
 hi Title              ctermbg=NONE
 hi Todo               ctermbg=NONE
 hi Underlined         ctermbg=NONE
-hi DiffAdd            ctermbg=NONE
-hi DiffText           ctermbg=NONE
 hi ErrorMsg           ctermbg=NONE
 hi LineNr             ctermbg=NONE
 
@@ -46,8 +46,8 @@ set smarttab
 set expandtab
 
 " my mappings
-let mapleader = "-"
-let maplocalleader = "\\"
+let mapleader = ","
+let maplocalleader = "-"
 
 " edit vim file
 nnoremap <leader>ev :split $MYVIMRC<cr>
@@ -90,13 +90,14 @@ autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
 
 " <TAB>: completion.
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+" inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 
 " airline stuff
 let g:airline#extensions#tabline#enabled = 1
 
 " unite stuff
 nnoremap <C-p> :Unite -start-insert file_rec/async<CR>
+nnoremap <leader>f :Unite file<CR>
 nnoremap <Space>/ :Unite grep:.<CR>
 nnoremap <leader>b :Unite -quick-match buffer<CR>
 if executable('ag')
@@ -108,6 +109,23 @@ nnoremap <C-n> :NERDTreeToggle<CR>
 
 let g:toggle_list_restore = 0
 
-"syntastic
-" let g:syntastic_haskell_checkers = ['ghc-mod']
+" syntastic
 let g:syntastic_always_populate_loc_list = 1
+
+" neosnippets
+imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+xmap <C-k>     <Plug>(neosnippet_expand_target)
+
+" TAB: if popup menu is visible then cycle that
+"      else check for an exandable snippet
+"      else tab
+imap <expr><TAB> pumvisible() 
+  \? "\<C-n>" 
+  \: neosnippet#expandable_or_jumpable() 
+    \? "\<Plug>(neosnippet_expand_or_jump)"
+    \: "\<TAB>"
+
+smap <expr><TAB> neosnippet#expandable_or_jumpable()
+  \? "\<Plug>(neosnippet_expand_or_jump)"
+  \: "\<TAB>"

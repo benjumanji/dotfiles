@@ -1,6 +1,7 @@
 set fish_greeting
 set -x PATH ~/.cabal/bin $PATH
 set -x PATH ~/bin $PATH
+set -x PATH ~/.gem/ruby/2.1.0/bin $PATH
 set -x EDITOR vim
 set -x GPG_TTY (tty)
 
@@ -72,3 +73,4 @@ set -g fish_color_cwd         $yellow
 set -g fish_color_git         $green
 
 . "$HOME/.homesick/repos/homeshick/homeshick.fish"
+. "$HOME/.config/fish/virtual.fish"
