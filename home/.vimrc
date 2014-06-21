@@ -89,12 +89,6 @@ autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
 
-" <TAB>: completion.
-" inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-
-" airline stuff
-let g:airline#extensions#tabline#enabled = 1
-
 " unite stuff
 nnoremap <C-p> :Unite -start-insert file_rec/async<CR>
 nnoremap <leader>f :Unite file<CR>
@@ -106,26 +100,13 @@ endif
 
 " nerd tree
 nnoremap <C-n> :NERDTreeToggle<CR>
-
-let g:toggle_list_restore = 0
+let NERDTreeShowHidden = 1
 
 " syntastic
 let g:syntastic_always_populate_loc_list = 1
 
-" neosnippets
-imap <C-k>     <Plug>(neosnippet_expand_or_jump)
-smap <C-k>     <Plug>(neosnippet_expand_or_jump)
-xmap <C-k>     <Plug>(neosnippet_expand_target)
-
 " TAB: if popup menu is visible then cycle that
-"      else check for an exandable snippet
 "      else tab
 imap <expr><TAB> pumvisible() 
   \? "\<C-n>" 
-  \: neosnippet#expandable_or_jumpable() 
-    \? "\<Plug>(neosnippet_expand_or_jump)"
-    \: "\<TAB>"
-
-smap <expr><TAB> neosnippet#expandable_or_jumpable()
-  \? "\<Plug>(neosnippet_expand_or_jump)"
   \: "\<TAB>"
