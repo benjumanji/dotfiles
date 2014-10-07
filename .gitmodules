@@ -49,3 +49,18 @@
 [submodule ".vim/bundle/vim-lucius"]
 	path = .vim/bundle/vim-lucius
 	url = https://github.com/jonathanfilip/vim-lucius.git
+[submodule ".vim/bundle/cabal.vim"]
+	path = .vim/bundle/cabal.vim
+	url = https://github.com/ianbollinger/cabal.vim.git
+[submodule ".vim/bundle/haskell-vim"]
+	path = .vim/bundle/haskell-vim
+	url = https://github.com/raichoo/haskell-vim.git
+[submodule ".vim/bundle/maktaba"]
+	path = .vim/bundle/maktaba
+	url = https://github.com/google/maktaba.git
+[submodule ".vim/bundle/vim-signature"]
+	path = .vim/bundle/vim-signature
+	url = https://github.com/kshenoy/vim-signature.git
+[submodule ".vim/bundle/thrift.vim"]
+	path = .vim/bundle/thrift.vim
+	url = https://github.com/solarnz/thrift.vim.git
