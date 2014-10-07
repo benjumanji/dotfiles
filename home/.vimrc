@@ -36,8 +36,7 @@ set laststatus=2
 
 
 "colors
-set background=dark
-colorscheme gotham 
+colorscheme gotham
 let g:airline_powerline_fonts = 1
 
 hi Normal             ctermbg=NONE
