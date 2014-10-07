@@ -1,32 +1,28 @@
-*cursorColor: #87afd7
-*color0:      #303030
-*color8:      #303030
-*color1:      #ff5f5f
-*color9:      #ff5f5f
-*color2:      #afd787
-*color10:     #afd787
-*color3:      #d7d7af
-*color11:     #d7d7af
-*color4:      #87d7ff
-*color12:     #87d7ff
-*color5:      #d7afd7
-*color13:     #d7afd7
-*color6:      #87d7af
-*color14:     #87d7af
-*color7:      #d7d7d7
-*color15:     #d7d7d7
+*.color0:       #0a0f14
+*.color8:       #10151b
+*.color1:       #c33027
+*.color9:       #d26939
+*.color2:       #26a98b
+*.color10:      #081f2d
+*.color3:       #edb54b
+*.color11:      #245361
+*.color4:       #195465
+*.color12:      #093748
+*.color5:       #4e5165
+*.color13:      #888ba5
+*.color6:       #33859d
+*.color14:      #599caa
+*.color7:       #98d1ce
+*.color15:      #d3ebe9
 
-*.cursorColor: #218693
+*.foreground:   #98d1ce
+*.background:   #0a0f14
+*.cursorColor:  #98d1ce
 
-*background:  #303030
-*foreground:  #d7d7d7
-*pointerColorBackground:  #303030
-*pointerColorForeground:  #d7d7d7 
-
-*fadeColor:  #303030
+*fadeColor:  #0a0f14
 *fading:     40
 
 URxvt.depth: 32
-URxvt*background: rgba:3000/3000/3000/ee00
+URxvt*background: rgba:0a00/0f00/1400/ee00
 URxvt.scrollBar: false
 URxvt.font: xft:DejaVu Sans Mono for Powerline:size=14
