@@ -1,23 +1,44 @@
 set nocompatible
 set shell=/bin/bash
 
-call pathogen#infect()
 syntax on
 filetype plugin indent on
 
+call plug#begin('~/.vim/plugged')
+Plug 'altercation/vim-colors-solarized'
+Plug 'benjumanji/vim-togglelist'
+Plug 'bling/vim-airline'
+Plug 'dag/vim-fish'
+Plug 'derekwyatt/vim-scala'
+Plug 'eagletmt/ghcmod-vim'
+Plug 'eagletmt/neco-ghc'
+Plug 'evidens/vim-twig'
+Plug 'jonathanfilip/vim-lucius'
+Plug 'kshenoy/vim-signature'
+Plug 'Lokaltog/vim-easymotion'
+Plug 'lukaszb/vim-web-indent'
+Plug 'raichoo/haskell-vim'
+Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/syntastic'
+Plug 'solarnz/thrift.vim'
+Plug 'Shougo/neocomplete.vim'
+Plug 'Shougo/unite.vim'
+Plug 'Shougo/vimproc.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'whatyouhide/vim-gotham'
+call plug#end()
+
+" hybrid cool kid mode
 set relativenumber
+set number
+
 set laststatus=2
 
 
-" let g:zenburn_transparent = 1
-" colors zenburn
-
 "colors
 set background=dark
-colorscheme lucius
-let g:lucius_no_term_bg = 1
+colorscheme gotham 
 let g:airline_powerline_fonts = 1
-let g:airline_theme = 'lucius'
 
 hi Normal             ctermbg=NONE
 hi Statement          ctermbg=NONE
@@ -59,7 +80,6 @@ nnoremap <silent> <leader>rw :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:noh
 ""misc
 nnoremap <leader>c ddO
 inoremap jk <esc>
-"inoremap <esc> <nop>
 onoremap H ^
 onoremap L $
 nnoremap H ^
@@ -75,6 +95,7 @@ augroup haskGroup
     " show types in autocomplete
     au BufNewFile,BufRead *.hs :let g:necoghc_enable_detailed_browse = 1
 augroup END
+
 
 
 " neocomplcache
@@ -95,7 +116,10 @@ nnoremap <leader>f :Unite file<CR>
 nnoremap <Space>/ :Unite grep:.<CR>
 nnoremap <leader>b :Unite -quick-match buffer<CR>
 if executable('ag')
-    let g:unite_source_rec_async_command = 'ag --nocolor --nogroup --hidden -g ""'
+    let g:unite_source_rec_async_command = 'ag --follow --nocolor --nogroup --hidden -g ""'
+    let g:unite_source_grep_command = 'ag'
+    let g:unite_source_grep_default_opts = '--line-numbers --nocolor --nogroup --smart-case --hidden'
+    let g:unite_source_grep_recursive_opt = ''
 endif
 
 " nerd tree
@@ -107,6 +131,6 @@ let g:syntastic_always_populate_loc_list = 1
 
 " TAB: if popup menu is visible then cycle that
 "      else tab
-imap <expr><TAB> pumvisible() 
-  \? "\<C-n>" 
+imap <expr><TAB> pumvisible()
+  \? "\<C-n>"
   \: "\<TAB>"
