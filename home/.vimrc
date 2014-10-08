@@ -25,6 +25,7 @@ Plug 'Shougo/neocomplete.vim'
 Plug 'Shougo/unite.vim'
 Plug 'Shougo/vimproc.vim'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-unimpaired'
 Plug 'whatyouhide/vim-gotham'
 call plug#end()
 
