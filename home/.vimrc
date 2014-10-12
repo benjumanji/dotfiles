@@ -4,6 +4,9 @@ set shell=/bin/bash
 syntax on
 filetype plugin indent on
 
+set diffopt=filler,vertical
+set fillchars=
+
 call plug#begin('~/.vim/plugged')
 Plug 'altercation/vim-colors-solarized'
 Plug 'benjumanji/vim-togglelist'
@@ -13,8 +16,10 @@ Plug 'derekwyatt/vim-scala'
 Plug 'eagletmt/ghcmod-vim'
 Plug 'eagletmt/neco-ghc'
 Plug 'evidens/vim-twig'
+Plug 'gilligan/vim-textobj-haskell'
 Plug 'jonathanfilip/vim-lucius'
 Plug 'junegunn/vim-easy-align'
+Plug 'kana/vim-textobj-user'
 Plug 'kshenoy/vim-signature'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'lukaszb/vim-web-indent'
@@ -42,13 +47,13 @@ set laststatus=2
 colorscheme gotham
 let g:airline_powerline_fonts = 1
 
-hi Normal             ctermbg=NONE
-hi Statement          ctermbg=NONE
-hi Title              ctermbg=NONE
-hi Todo               ctermbg=NONE
-hi Underlined         ctermbg=NONE
-hi ErrorMsg           ctermbg=NONE
-hi LineNr             ctermbg=NONE
+" hi Normal             ctermbg=NONE
+" hi Statement          ctermbg=NONE
+" hi Title              ctermbg=NONE
+" hi Todo               ctermbg=NONE
+" hi Underlined         ctermbg=NONE
+" hi ErrorMsg           ctermbg=NONE
+" hi LineNr             ctermbg=NONE
 
 " tab width 4 spaces
 " size of a hard tabstop
