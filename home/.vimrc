@@ -14,6 +14,7 @@ Plug 'eagletmt/ghcmod-vim'
 Plug 'eagletmt/neco-ghc'
 Plug 'evidens/vim-twig'
 Plug 'jonathanfilip/vim-lucius'
+Plug 'junegunn/vim-easy-align'
 Plug 'kshenoy/vim-signature'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'lukaszb/vim-web-indent'
@@ -134,3 +135,5 @@ let g:syntastic_always_populate_loc_list = 1
 imap <expr><TAB> pumvisible()
   \? "\<C-n>"
   \: "\<TAB>"
+
+vmap <Enter> <Plug>(EasyAlign)
