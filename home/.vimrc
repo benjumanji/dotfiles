@@ -31,6 +31,7 @@ Plug 'scrooloose/syntastic'
 Plug 'solarnz/thrift.vim'
 Plug 'Shougo/neocomplete.vim'
 Plug 'Shougo/unite.vim'
+Plug 'Shougo/vimfiler.vim'
 Plug 'Shougo/vimproc.vim', {'do': 'make'}
 Plug 'tommcdo/vim-exchange'
 Plug 'tpope/vim-fugitive'
@@ -148,3 +149,6 @@ imap <expr><TAB> pumvisible()
   \: "\<TAB>"
 
 vmap <Enter> <Plug>(EasyAlign)
+
+" vimfiler
+let g:vimfiler_safe_mode_by_default = 0
