@@ -1,0 +1,3 @@
+function dup
+	urxvt &
+end
