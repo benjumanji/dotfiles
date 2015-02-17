@@ -9,7 +9,7 @@ set fillchars=
 
 call plug#begin('~/.vim/plugged')
 Plug 'altercation/vim-colors-solarized'
-Plug 'benjumanji/vim-togglelist'
+Plug 'bkad/vim-terraform'
 Plug 'bling/vim-airline'
 Plug 'dag/vim-fish'
 Plug 'derekwyatt/vim-scala'
@@ -23,7 +23,9 @@ Plug 'kana/vim-textobj-user'
 Plug 'kshenoy/vim-signature'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'lukaszb/vim-web-indent'
+Plug 'mustache/vim-mustache-handlebars'
 Plug 'raichoo/haskell-vim'
+Plug 'saltstack/salt-vim'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/syntastic'
 Plug 'solarnz/thrift.vim'
@@ -122,6 +124,9 @@ nnoremap <C-p> :Unite -start-insert file_rec/async<CR>
 nnoremap <leader>f :Unite file<CR>
 nnoremap <Space>/ :Unite grep:.<CR>
 nnoremap <leader>b :Unite -quick-match buffer<CR>
+let g:unite_source_history_yank_enable = 1
+nnoremap <leader>y :<C-u>Unite history/yank<CR>
+
 if executable('ag')
     let g:unite_source_rec_async_command = 'ag --follow --nocolor --nogroup --hidden -g ""'
     let g:unite_source_grep_command = 'ag'
