@@ -6,6 +6,10 @@ filetype plugin indent on
 
 set diffopt=filler,vertical
 set fillchars=
+set hidden
+
+set wildmode=longest,list,full
+set wildmenu
 
 call plug#begin('~/.vim/plugged')
 Plug 'altercation/vim-colors-solarized'
