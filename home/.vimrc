@@ -38,7 +38,9 @@ Plug 'Shougo/unite.vim'
 Plug 'Shougo/vimfiler.vim'
 Plug 'Shougo/vimproc.vim', {'do': 'make'}
 Plug 'tommcdo/vim-exchange'
+Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'whatyouhide/vim-gotham'
 call plug#end()
@@ -156,3 +158,5 @@ vmap <Enter> <Plug>(EasyAlign)
 
 " vimfiler
 let g:vimfiler_safe_mode_by_default = 0
+"dispatch
+nnoremap <leader>d :Dispatch<cr>
