@@ -32,6 +32,7 @@ Plug 'raichoo/haskell-vim'
 Plug 'saltstack/salt-vim'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/syntastic'
+Plug 'sjl/gundo.vim'
 Plug 'solarnz/thrift.vim'
 Plug 'Shougo/neocomplete.vim'
 Plug 'Shougo/unite.vim'
@@ -158,5 +159,11 @@ vmap <Enter> <Plug>(EasyAlign)
 
 " vimfiler
 let g:vimfiler_safe_mode_by_default = 0
+
+"gundo
+nnoremap <leader>u :GundoToggle<cr>
+set undofile
+set undodir=~/.vim/undo
+
 "dispatch
 nnoremap <leader>d :Dispatch<cr>
