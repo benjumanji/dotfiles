@@ -129,8 +129,7 @@ autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
 
 " unite stuff
 nnoremap <C-p> :Unite -start-insert file_rec/async<CR>
-nnoremap <leader>f :Unite file<CR>
-nnoremap <Space>/ :Unite grep:.<CR>
+nnoremap <leader>/ :Unite grep:.<CR>
 nnoremap <leader>b :Unite -quick-match buffer<CR>
 let g:unite_source_history_yank_enable = 1
 nnoremap <leader>y :<C-u>Unite history/yank<CR>
@@ -159,6 +158,7 @@ vmap <Enter> <Plug>(EasyAlign)
 
 " vimfiler
 let g:vimfiler_safe_mode_by_default = 0
+nnoremap <leader>f :VimFiler
 
 "gundo
 nnoremap <leader>u :GundoToggle<cr>
