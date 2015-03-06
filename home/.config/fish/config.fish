@@ -1,7 +1,7 @@
 set fish_greeting
 set -x PATH ~/.cabal/bin $PATH
 set -x PATH ~/bin $PATH
-set -x PATH ~/.gem/ruby/2.1.0/bin $PATH
+set -x PATH ~/.gem/ruby/2.2.0/bin $PATH
 set -x EDITOR vim
 set -x GPG_TTY (tty)
 
