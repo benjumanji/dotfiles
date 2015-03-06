@@ -26,8 +26,9 @@ Plug 'junegunn/vim-easy-align'
 Plug 'kana/vim-textobj-user'
 Plug 'kshenoy/vim-signature'
 Plug 'Lokaltog/vim-easymotion'
-Plug 'lukaszb/vim-web-indent'
+Plug 'mxw/vim-jsx'
 Plug 'mustache/vim-mustache-handlebars'
+Plug 'pangloss/vim-javascript'
 Plug 'raichoo/haskell-vim'
 Plug 'saltstack/salt-vim'
 Plug 'scrooloose/nerdtree'
@@ -67,14 +68,14 @@ let g:airline_powerline_fonts = 1
 
 " tab width 4 spaces
 " size of a hard tabstop
-set tabstop=4
+set tabstop=2
 
 " size of an "indent"
-set shiftwidth=4
+set shiftwidth=2
 
 " a combination of spaces and tabs are used to simulate tab stops at a width
 " other than the (hard)tabstop
-set softtabstop=4
+set softtabstop=2
 
 " You may also want to try the following:
 " make "tab" insert indents instead of tabs at the beginning of a line
@@ -84,7 +85,7 @@ set smarttab
 set expandtab
 
 " my mappings
-let mapleader = ","
+let mapleader = " "
 let maplocalleader = "-"
 
 " edit vim file
@@ -95,7 +96,6 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 nnoremap <silent> <leader>rw :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
 
 ""misc
-nnoremap <leader>c ddO
 inoremap jk <esc>
 onoremap H ^
 onoremap L $
@@ -112,8 +112,6 @@ augroup haskGroup
     " show types in autocomplete
     au BufNewFile,BufRead *.hs :let g:necoghc_enable_detailed_browse = 1
 augroup END
-
-
 
 " neocomplcache
 let g:neocomplete#enable_at_startup = 1
@@ -167,3 +165,6 @@ set undodir=~/.vim/undo
 
 "dispatch
 nnoremap <leader>d :Dispatch<cr>
+
+"jsx
+let g:jsx_ext_required = 0
