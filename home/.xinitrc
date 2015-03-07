@@ -3,7 +3,7 @@
 ./.screenlayout/default.sh &
 xcompmgr -c &
 xrdb ~/.Xresources &
-feh --bg-fill ~/Pictures/white-and-grey.jpg &
+feh --bg-fill ~/Pictures/tokyo_japan_bokeh_city-Japan_Landscape_Wallpaper_1920x1080.jpg &
 /usr/bin/start-pulseaudio-x11 &
 gpg-agent --daemon --enable-ssh-support \
                    --write-env-file "$HOME/.gpg-agent-info"
@@ -22,7 +22,6 @@ function start_agent {
 # Source SSH settings, if applicable
 if [ -f "${SSH_ENV}" ]; then
      . "${SSH_ENV}" > /dev/null
-     #ps ${SSH_AGENT_PID} doesn't work under cywgin
      ps -ef | grep ${SSH_AGENT_PID} | grep ssh-agent$ > /dev/null || {
          start_agent;
      }
