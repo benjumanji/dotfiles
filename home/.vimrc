@@ -31,7 +31,6 @@ Plug 'mustache/vim-mustache-handlebars'
 Plug 'pangloss/vim-javascript'
 Plug 'raichoo/haskell-vim'
 Plug 'saltstack/salt-vim'
-Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/syntastic'
 Plug 'sjl/gundo.vim'
 Plug 'solarnz/thrift.vim'
@@ -138,10 +137,6 @@ if executable('ag')
     let g:unite_source_grep_default_opts = '--line-numbers --nocolor --nogroup --smart-case --hidden'
     let g:unite_source_grep_recursive_opt = ''
 endif
-
-" nerd tree
-nnoremap <C-n> :NERDTreeToggle<CR>
-let NERDTreeShowHidden = 1
 
 " syntastic
 let g:syntastic_always_populate_loc_list = 1
