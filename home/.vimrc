@@ -151,7 +151,7 @@ vmap <Enter> <Plug>(EasyAlign)
 
 " vimfiler
 let g:vimfiler_safe_mode_by_default = 0
-nnoremap <leader>f :VimFiler
+nnoremap <leader>f :VimFilerBufferDir<cr>
 
 "gundo
 nnoremap <leader>u :GundoToggle<cr>
