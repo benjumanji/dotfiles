@@ -167,3 +167,12 @@ nnoremap <leader>d :Dispatch<cr>
 
 "jsx
 let g:jsx_ext_required = 0
+
+"easy motion
+nmap s <Plug>(easymotion-s2)
+
+" Gif config
+map <Leader>l <Plug>(easymotion-lineforward)
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
+map <Leader>h <Plug>(easymotion-linebackward)
