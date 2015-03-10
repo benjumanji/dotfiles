@@ -38,6 +38,7 @@ Plug 'sjl/gundo.vim'
 Plug 'solarnz/thrift.vim'
 Plug 'Shougo/neocomplete.vim'
 Plug 'Shougo/unite.vim'
+Plug 'Shougo/unite-outline'
 Plug 'Shougo/vimfiler.vim'
 Plug 'Shougo/vimproc.vim', {'do': 'make'}
 Plug 'tommcdo/vim-exchange'
@@ -129,7 +130,8 @@ autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
 " unite stuff
 nnoremap <C-p> :Unite -start-insert file_rec/async<CR>
 nnoremap <leader>/ :Unite grep:.<CR>
-nnoremap <leader>b :Unite -quick-match buffer<CR>
+nnoremap <leader>b :Unite -start-insert buffer<CR>
+nnoremap <leader>o :Unite outline<cr>
 let g:unite_source_history_yank_enable = 1
 nnoremap <leader>y :<C-u>Unite history/yank<CR>
 
