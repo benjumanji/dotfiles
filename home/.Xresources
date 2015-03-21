@@ -25,4 +25,4 @@
 URxvt.depth: 32
 URxvt*background: rgba:0a00/0f00/1400/ee00
 URxvt.scrollBar: false
-URxvt.font: xft:DejaVu Sans Mono for Powerline:size=14
+URxvt.font: xft:PragmataPro:size=15

@@ -1,0 +1,26 @@
+[global_config]
+  borderless = True
+[keybindings]
+[profiles]
+  [[default]]
+    allow_bold = False
+    background_color = "#0a0f14"
+    background_darkness = 0.74
+    background_image = None
+    background_type = transparent
+    cursor_color = "#7b7b7b"
+    foreground_color = "#98d1ce"
+    font = PragmataPro 15
+    palette = "#0a0f14:#c33027:#26a98b:#edb54b:#195465:#4e5165:#33859d:#98d1ce:#10151b:#d26939:#081f2d:#245361:#093748:#888ba5:#599caa:#d3ebe9"
+    scrollbar_position = hidden
+    show_titlebar = False
+    use_system_font = False
+[layouts]
+  [[default]]
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+    [[[window0]]]
+      type = Window
+      parent = ""
+[plugins]
