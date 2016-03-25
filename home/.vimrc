@@ -12,9 +12,10 @@ set wildmode=longest,list,full
 set wildmenu
 
 call plug#begin('~/.vim/plugged')
-Plug 'altercation/vim-colors-solarized'
+Plug 'AlessandroYorba/Sierra'
 Plug 'bkad/vim-terraform'
-Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'cespare/vim-toml'
 Plug 'chrisbra/vim-diff-enhanced'
 Plug 'dag/vim-fish'
@@ -24,6 +25,7 @@ Plug 'eagletmt/neco-ghc'
 Plug 'evidens/vim-twig'
 Plug 'gilligan/vim-textobj-haskell'
 Plug 'jonathanfilip/vim-lucius'
+Plug 'jwalton512/vim-blade'
 Plug 'junegunn/vim-easy-align'
 Plug 'junegunn/vim-oblique'
 Plug 'junegunn/vim-pseudocl'
@@ -46,6 +48,7 @@ Plug 'Shougo/vimfiler.vim'
 Plug 'Shougo/vimproc.vim', {'do': 'make'}
 Plug 'tommcdo/vim-exchange'
 Plug 'tpope/vim-dispatch'
+Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
@@ -60,8 +63,10 @@ set laststatus=2
 
 
 "colors
-colorscheme gotham
+let g:sierra_Twilight = 1
+let g:airline_theme = 'gotham'
 let g:airline_powerline_fonts = 1
+colorscheme sierra
 
 " hi Normal             ctermbg=NONE
 " hi Statement          ctermbg=NONE
@@ -112,8 +117,6 @@ vnoremap L $
 " haskell
 augroup haskGroup
     autocmd!
-    " for hothasktags
-    au BufNewFile,BufRead *.hs :set iskeyword=a-z,A-Z,_,.,39,48-57
     " show types in autocomplete
     au BufNewFile,BufRead *.hs :let g:necoghc_enable_detailed_browse = 1
 augroup END
@@ -139,7 +142,9 @@ let g:unite_source_history_yank_enable = 1
 nnoremap <leader>y :<C-u>Unite history/yank<CR>
 
 if executable('ag')
-    let g:unite_source_rec_async_command = 'ag --follow --nocolor --nogroup --hidden -g ""'
+    let g:unite_source_rec_async_command =
+      \ ['ag', '--follow', '--nocolor', '--nogroup',
+      \  '--hidden', '-g', '']
     let g:unite_source_grep_command = 'ag'
     let g:unite_source_grep_default_opts = '--line-numbers --nocolor --nogroup --smart-case --hidden'
     let g:unite_source_grep_recursive_opt = ''
@@ -158,6 +163,7 @@ vmap <Enter> <Plug>(EasyAlign)
 
 " vimfiler
 let g:vimfiler_safe_mode_by_default = 0
+let g:vimfiler_ignore_pattern = ".*\.swp$"
 nnoremap <leader>f :VimFilerBufferDir<cr>
 
 "gundo
