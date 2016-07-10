@@ -1,0 +1,68 @@
+[colors]
+foreground      = #e4e4e4
+foreground_bold = #e4e4e4
+cursor          = #e4e4e4
+background      = rgba(28, 28, 28, 0.8)
+
+color0  = #4d4d4d
+color8  = #555555
+
+color1  = #af5f5f
+color9  = #af5f5f
+
+color2  = #d75f5f
+color10 = #d75f5f
+
+color3  = #afd7d7
+color11 = #b0d6d7
+
+color4  = #af8787
+color12 = #af8787
+
+color5  = #dfaf5f
+color13 = #dfaf5f
+
+color6  = #ffa0a0
+color14 = #fda0a0
+
+color7  = #f5deb3
+color15 = #ffffff
+
+[options]
+font = PragmataPro 15
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
