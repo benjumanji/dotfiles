@@ -1,28 +1,28 @@
 [colors]
-foreground      = #e4e4e4
-foreground_bold = #e4e4e4
-cursor          = #e4e4e4
-background      = rgba(28, 28, 28, 0.8)
+foreground      = #dddddd
+foreground_bold = #dddddd
+cursor          = #dddddd
+background      = rgba(21, 21, 21, 0.8)
 
-color0  = #4d4d4d
+color0  = #151515
 color8  = #555555
 
-color1  = #af5f5f
-color9  = #af5f5f
+color1  = #9e4a4f
+color9  = #9e4a4f
 
-color2  = #d75f5f
-color10 = #d75f5f
+color2  = #cb484d
+color10 = #cb484d
 
-color3  = #afd7d7
-color11 = #b0d6d7
+color3  = #a1cfce
+color11 = #a1cfce
 
-color4  = #af8787
-color12 = #af8787
+color4  = #9e7374
+color12 = #9e7374
 
-color5  = #dfaf5f
-color13 = #dfaf5f
+color5  = #d6a04d
+color13 = #d6a04d
 
-color6  = #ffa0a0
+color6  = #fd9d9f
 color14 = #fda0a0
 
 color7  = #f5deb3
