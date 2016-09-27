@@ -5,4 +5,4 @@ set -x GPG_TTY (tty)
 
 . "$HOME/.homesick/repos/homeshick/homeshick.fish"
 . "$HOME/.homesick/repos/homeshick/completions/homeshick.fish"
-. "$HOME/.config/fish/virtual.fish"
+eval (python -m virtualfish)
