@@ -1,31 +1,38 @@
 [colors]
-foreground      = #dddddd
-foreground_bold = #dddddd
-cursor          = #dddddd
-background      = rgba(21, 21, 21, 0.8)
+foreground      = #eeeeee
+foreground_bold = #eeeeee
+cursor          = #eeeeee
+background      = rgba(32, 32, 32, 1)
 
-color0  = #151515
-color8  = #555555
+color0  = #282828
+color8  = #1d1d1d
 
-color1  = #9e4a4f
-color9  = #9e4a4f
+# red
+color1  = #f43753
+color9  = #f43753
 
-color2  = #cb484d
-color10 = #cb484d
+# green
+color2  = #c9d05c
+color10 = #c9d05c
 
-color3  = #a1cfce
-color11 = #a1cfce
+# yellow
+color3  = #ffc24b
+color11 = #ffc24b
 
-color4  = #9e7374
-color12 = #9e7374
+#light blue
+color4  = #b3deef 
+color12 = #b3deef
 
-color5  = #d6a04d
-color13 = #d6a04d
+# beige
+color5  = #d3b987
+color13 = #d3b987
 
-color6  = #fd9d9f
-color14 = #fda0a0
+# strong blue
+color6  = #73cef4
+color14 = #73cef4
 
-color7  = #f5deb3
+# gray
+color7  = #eeeeee
 color15 = #ffffff
 
 [options]
