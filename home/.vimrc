@@ -14,8 +14,6 @@ set wildmenu
 call plug#begin('~/.vim/plugged')
 Plug 'AlessandroYorba/Sierra'
 Plug 'bkad/vim-terraform'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'cespare/vim-toml'
 Plug 'chrisbra/vim-diff-enhanced'
 Plug 'dag/vim-fish'
@@ -25,6 +23,8 @@ Plug 'eagletmt/neco-ghc'
 Plug 'evidens/vim-twig'
 Plug 'gilligan/vim-textobj-haskell'
 Plug 'Glench/Vim-Jinja2-Syntax'
+Plug 'itchyny/lightline.vim'
+Plug 'jacoborus/tender.vim'
 Plug 'jonathanfilip/vim-lucius'
 Plug 'jwalton512/vim-blade'
 Plug 'junegunn/vim-easy-align'
@@ -64,18 +64,12 @@ set laststatus=2
 
 
 "colors
-let g:sierra_Twilight = 1
-let g:airline_theme = 'gotham'
-let g:airline_powerline_fonts = 1
-colorscheme sierra
+if (has("termguicolors"))
+  set termguicolors
+endif
 
-" hi Normal             ctermbg=NONE
-" hi Statement          ctermbg=NONE
-" hi Title              ctermbg=NONE
-" hi Todo               ctermbg=NONE
-" hi Underlined         ctermbg=NONE
-" hi ErrorMsg           ctermbg=NONE
-" hi LineNr             ctermbg=NONE
+colorscheme tender
+let g:lightline = { 'colorscheme': 'tenderplus' }
 
 " tab width 4 spaces
 " size of a hard tabstop
