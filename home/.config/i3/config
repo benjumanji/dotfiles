@@ -120,3 +120,5 @@ bindsym Mod1+r mode "resize"
 bar {
         status_command i3status
 }
+
+exec --no-startup-id compton
