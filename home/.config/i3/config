@@ -127,3 +127,4 @@ bar {
 }
 
 exec --no-startup-id compton
+exec --no-startup-id feh --bg-fill ~/.local/share/wallpaper/beaker_wallpaper.jpg
