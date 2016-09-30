@@ -1,2 +1,4 @@
 .vim/plugged
 .vim/undo
+.vim/.netrwhist
+.vim/autoload/plug.vim.old
