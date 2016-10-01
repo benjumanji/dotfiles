@@ -1,16 +1,17 @@
 ! rofi base colors
 #define rofibg #282828
+#define rofihl #73cef4 
 
 ! get dem sweet new color settings
 rofi.color-enabled: true
 
-! State:           bg      fg       bgalt   hlbg     hlfg
-rofi.color-normal: rofibg, #eeeeee, rofibg, #eeeeee, rofibg
-rofi.color-urgent: rofibg, #eeeeee, rofibg, #eeeeee, rofibg
-rofi.color-active: rofibg, #eeeeee, rofibg, #eeeeee, rofibg
+! State:           bg      fg       bgalt   hlbg    hlfg
+rofi.color-normal: rofibg, #eeeeee, rofibg, rofibg, rofihl
+rofi.color-urgent: rofibg, #eeeeee, rofibg, rofibg, rofihl
+rofi.color-active: rofibg, #eeeeee, rofibg, rofibg, rofihl
 !                  background border
 rofi.color-window: rofibg,    rofibg
-rofi.opacity: 85
+rofi.opacity: 90
 rofi.width: 100
 rofi.padding: 480
 rofi.lines: 5
