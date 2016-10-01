@@ -1,45 +1,18 @@
+! rofi base colors
+#define rofibg #282828
 
-! black
-*.color0:       #4d4d4d
-*.color8:       #555555
+! get dem sweet new color settings
+rofi.color-enabled: true
 
-! red
-*.color1:       #af5f5f
-*.color9:       #af5f5f
-
-! green
-*.color2:       #d75f5f
-*.color10:      #d75f5f
-
-! yellow
-*.color3:       #afd7d7
-*.color11:      #b0d6d7
-
-! blue
-*.color4:       #af8787
-*.color12:      #af8787
-
-! magenta
-*.color5:       #dfaf5f
-*.color13:      #dfaf5f
-
-! cyan
-*.color6:       #ffa0a0
-*.color14:      #fda0a0
-
-! white
-*.color7:       #f5deb3
-*.color15:      #ffffff
-
-! special
-*.foreground:   #e4e4e4
-*.background:   #1c1c1c
-*.cursorColor:  #e4e4e4
-
-*fadeColor:  #1c1c1c
-*fading:     40
-
-URxvt.depth: 32
-URxvt*background: rgba:1c00/1c00/1c00/ee00
-URxvt.scrollBar: false
-URxvt.font: xft:PragmataPro:size=15
+! State:           bg      fg       bgalt   hlbg     hlfg
+rofi.color-normal: rofibg, #eeeeee, rofibg, #eeeeee, rofibg
+rofi.color-urgent: rofibg, #eeeeee, rofibg, #eeeeee, rofibg
+rofi.color-active: rofibg, #eeeeee, rofibg, #eeeeee, rofibg
+!                  background border
+rofi.color-window: rofibg,    rofibg
+rofi.opacity: 85
+rofi.width: 100
+rofi.padding: 480
+rofi.lines: 5
+rofi.bw: 0
+rofi.font: PragmataPro 25
