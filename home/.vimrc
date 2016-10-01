@@ -97,6 +97,9 @@ let maplocalleader = "-"
 nnoremap <leader>ev :split $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
+" edit i3 config
+nnoremap <leader>ei :edit ~/.config/i3/config<cr>
+
 " removetrailing whitespace
 nnoremap <silent> <leader>rw :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
 
