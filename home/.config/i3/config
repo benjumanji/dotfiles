@@ -18,7 +18,7 @@ bindsym $mod+Return exec termite -e fish
 bindsym $mod+Shift+c kill
 
 # start dmenu (a program launcher)
-bindsym $mod+p exec dmenu_run
+bindsym $mod+p exec "rofi -show run"
 
 # change$ fous
 bindsym $mod+$l focus left
