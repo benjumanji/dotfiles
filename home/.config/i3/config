@@ -1,6 +1,6 @@
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:PragmataPro 8
+font pango:Noto Sans 9
 
 set $u k
 set $d j
@@ -19,6 +19,7 @@ bindsym $mod+Shift+c kill
 
 # start dmenu (a program launcher)
 bindsym $mod+p exec "rofi -show run"
+bindsym $mod+o exec "autopass"
 
 # change$ fous
 bindsym $mod+$l focus left
@@ -52,7 +53,7 @@ bindsym $mod+a focus parent
 # switch to workspace
 bindsym $mod+1 workspace 1
 bindsym $mod+2 workspace 2
-bindsym $mod+3 workspace 3
+bindsym $mod+3 workspace "3: www"
 bindsym $mod+4 workspace 4
 bindsym $mod+5 workspace 5
 bindsym $mod+6 workspace 6
@@ -87,37 +88,40 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 # lock screen
 bindsym $mod+Control+d exec --no-startup-id i3lock
 
-# resize window (you can also use the mouse for that)
-mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
+hide_edge_borders both
 
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
-        bindsym $left       resize shrink width 10 px or 10 ppt
-        bindsym $down       resize grow height 10 px or 10 ppt
-        bindsym $up         resize shrink height 10 px or 10 ppt
-        bindsym $right      resize grow width 10 px or 10 ppt
+set $bg-color    #2f343f
+set $bgi-color   #2f343f
+set $bgu-color   #e53935
+set $text-color  #f3f4f5
+set $texti-color #676e7d
 
-        # same bindings, but for the arrow keys
-        bindsym Left        resize shrink width 10 px or 10 ppt
-        bindsym Down        resize grow height 10 px or 10 ppt
-        bindsym Up          resize shrink height 10 px or 10 ppt
-        bindsym Right       resize grow width 10 px or 10 ppt
-
-        # back to normal: Enter or Escape
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-}
-
-bindsym Mod1+r mode "resize"
+# class                 border     background  text         indicator child_border
+client.focused          $bg-color  $bg-color   $text-color  #ff0000   $bg-color
+client.unfocused        $bgi-color $bgi-color  $texti-color #ff0000   $bgi-color
+client.focused_inactive $bgi-color $bgi-color  $texti-color #ff0000   $bgi-color
+client.urgent           $bgu-color $bgu-color  $text-color  #ff0000   $bgu-color
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command i3status
+  font pango:Noto Mono 10
+  status_command $HOME/bin/conky-i3bar
+  colors {
+    background $bg-color
+    separator  #757575
+    #                  border     background text
+    focused_workspace  $bg-color  $bg-color  $text-color
+    inactive_workspace $bgi-color $bgi-color $texti-color
+    urgent_workspace   $bgu-color $bgu-color $text-color
+  }
 }
+
+exec --no-startup-id i3-msg "workspace 3: www; exec firefox"
+exec --no-startup-id i3-msg "workspace 3: www; exec qutebrowser"
+exec --no-startup-id i3-msg "workspace 3: www; layout stacking"
+exec --no-startup-id "xrdb -merge ~/.Xresources"
+exec --no-stackup-id "gpg-connect-agent updatestartuptty /bye"
 
 exec --no-startup-id compton
 exec --no-startup-id feh --bg-fill ~/.local/share/wallpaper/beaker_wallpaper.jpg
