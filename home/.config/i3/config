@@ -86,7 +86,7 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # lock screen
-bindsym $mod+Control+d exec --no-startup-id i3lock
+bindsym $mod+Control+d exec --no-startup-id "$HOME/bin/i3lock-wrapper"
 
 hide_edge_borders both
 
