@@ -2,6 +2,7 @@ set fish_greeting
 set -x PATH ~/bin $PATH
 set -x EDITOR vim
 set -x GPG_TTY (tty)
+gpg-connect-agent updatestartuptty /bye > /dev/null ^&1
 
 set fish_term24bit 1
 
