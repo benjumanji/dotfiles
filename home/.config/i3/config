@@ -121,7 +121,6 @@ exec --no-startup-id i3-msg "workspace 3: www; exec firefox"
 exec --no-startup-id i3-msg "workspace 3: www; exec qutebrowser"
 exec --no-startup-id i3-msg "workspace 3: www; layout stacking"
 exec --no-startup-id "xrdb -merge ~/.Xresources"
-exec --no-stackup-id "gpg-connect-agent updatestartuptty /bye"
 
 exec --no-startup-id compton
 exec --no-startup-id feh --bg-fill ~/.local/share/wallpaper/beaker_wallpaper.jpg
