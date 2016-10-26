@@ -2,6 +2,9 @@ set fish_greeting
 set -x PATH ~/bin $PATH
 set -x EDITOR vim
 set -x GPG_TTY (tty)
+set -x LDAPTLS_CACERT /etc/ssl/certs/ca-certificates.crt
+
+# make sure that gpg has has the right tty
 gpg-connect-agent updatestartuptty /bye > /dev/null ^&1
 
 set fish_term24bit 1
