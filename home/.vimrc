@@ -24,7 +24,6 @@ Plug 'evidens/vim-twig'
 Plug 'gilligan/vim-textobj-haskell'
 Plug 'Glench/Vim-Jinja2-Syntax'
 Plug 'itchyny/lightline.vim'
-Plug 'jacoborus/tender.vim'
 Plug 'jonathanfilip/vim-lucius'
 Plug 'jwalton512/vim-blade'
 Plug 'junegunn/vim-easy-align'
@@ -33,6 +32,7 @@ Plug 'kana/vim-textobj-user'
 Plug 'kshenoy/vim-signature'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'mxw/vim-jsx'
+Plug 'morhetz/gruvbox'
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'pangloss/vim-javascript'
 Plug 'raichoo/haskell-vim'
@@ -67,8 +67,9 @@ if (has("termguicolors"))
   set termguicolors
 endif
 
-colorscheme tender
-let g:lightline = { 'colorscheme': 'tenderplus' }
+set background=dark
+colorscheme gruvbox
+let g:lightline = { 'colorscheme': 'gruvbox' }
 
 " tab width 4 spaces
 " size of a hard tabstop
