@@ -9,15 +9,13 @@ gpg-connect-agent updatestartuptty /bye > /dev/null ^&1
 
 set fish_term24bit 1
 
-set fish_color_normal      eeeeee
-set fish_color_command     73cef4
-set fish_color_quote       d3b987
-set fish_color_param       b3deef
-set fish_color_error       c5152f
-set fish_color_escape      715b2f
-set fish_color_redirection bbbbbb
-set fish_color_end         bbbbbb
-set fish_auto_suggestion   666666
+set pure_color_blue (set_color "458588")
+set pure_color_cyan (set_color "83a598")
+set pure_color_gray (set_color "a89984")
+set pure_color_green (set_color "689d6a")
+set pure_color_normal (set_color "ebdbb2")
+set pure_color_red (set_color "cc241d")
+set pure_color_yellow (set_color "fabd2f")
 
 # dem sweet manpage colors
 set -x LESS_TERMCAP_md (printf "\e[01;31m")
