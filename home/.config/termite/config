@@ -1,39 +1,41 @@
 [colors]
-foreground      = #eeeeee
-foreground_bold = #eeeeee
-cursor          = #eeeeee
-background      = rgba(32, 32, 32, 0.85)
+background = #282828
+background = rgba(40, 40, 40, 0.85)
+foreground = #ebdbb2
+foreground_bold = #ebdbb2
 
-color0  = #282828
-color8  = #1d1d1d
+# dark0 + gray
+color0 = #282828
+color8 = #928374
 
-# red
-color1  = #f43753
-color9  = #f43753
+# neutral_red + bright_red
+color1 = #cc241d
+color9 = #fb4934
 
-# green
-color2  = #c9d05c
-color10 = #c9d05c
+# neutral_green + bright_green
+color2 = #98971a
+color10 = #b8bb26
 
-# yellow
-color3  = #ffc24b
-color11 = #ffc24b
+# neutral_yellow + bright_yellow
+color3 = #d79921
+color11 = #fabd2f
 
-#light blue
-color4  = #b3deef 
-color12 = #b3deef
+# neutral_blue + bright_blue
+color4 = #458588
+color12 = #83a598
 
-# beige
-color5  = #d3b987
-color13 = #d3b987
+# neutral_purple + bright_purple
+color5 = #b16286
+color13 = #d3869b
 
-# strong blue
-color6  = #73cef4
-color14 = #73cef4
+# neutral_aqua + faded_aqua
+color6 = #689d6a
+color14 = #8ec07c
 
-# gray
-color7  = #eeeeee
-color15 = #ffffff
+# light4 + light1
+color7 = #a89984
+color15 = #ebdbb2
 
 [options]
-font = PragmataPro 15
+font = Iosevka Term 15
+# vim: ft=dosini cms=#%s
