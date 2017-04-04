@@ -1,0 +1,4 @@
+[Desktop Entry]
+Exec=/bin/polybar left
+Name=Polybar left
+Type=Application

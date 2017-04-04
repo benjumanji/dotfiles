@@ -1,0 +1,5 @@
+[Desktop Entry]
+Type=Application
+Name=SSH Key Agent
+Comment=GNOME Keyring: SSH Agent
+Hidden=true

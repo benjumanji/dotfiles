@@ -1,0 +1,4 @@
+[Desktop Entry]
+Exec=/bin/feh --bg-fill /home/ben/.local/share/wallpaper/monochrome_bokeh.jpg
+Name=feh
+Type=Application

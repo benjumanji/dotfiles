@@ -1,0 +1,26 @@
+#! /bin/sh
+
+sxhkd &
+dex -a
+
+bspc monitor DVI-D-0 -d compile im
+bspc monitor DVI-I-1 -d code "scratch-4" 
+bspc monitor HDMI-0  -d browser "scratch-6" "scratch-7" "scratch-8"
+
+bspc config border_width         2
+bspc config window_gap          12
+
+bspc config click_to_focus          true
+bspc config pointer_follows_focus   true
+bspc config pointer_follows_monitor true
+
+bspc config split_ratio          0.52
+bspc config borderless_monocle   false
+bspc config gapless_monocle      false
+
+bspc rule -a qutebrowser desktop='browser'
+bspc rule -a Firefox desktop='browser'
+
+bspc rule -a Slack desktop='im'
+bspc rule -a Mattermost desktop='im'
+bspc rule -a crx_bikioccmkafdpakkkcpdbppfkghcmihk desktop='im'

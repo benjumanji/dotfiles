@@ -1,0 +1,4 @@
+[Desktop Entry]
+Exec=/bin/polybar centre
+Name=Polybar centre
+Type=Application
