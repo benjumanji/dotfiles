@@ -5,7 +5,7 @@ function k8s
   end
 
   function k8s-ns
-  	switch (count $argv)
+    switch (count $argv)
     case 0
       set -l ctx (kubectl config current-context)
       set -l filter ".contexts[] | select(.name == \"$ctx\") | .context.namespace"
@@ -18,7 +18,7 @@ function k8s
   end
 
   function k8s-refresh
-  	if test (count $argv) -ne 1
+    if test (count $argv) -ne 1
       "must supply environment arg"
       return 1
     end
@@ -31,7 +31,7 @@ function k8s
     functions -e k8s-switch
   end
 
-	switch (count $argv)
+  switch (count $argv)
   case 1
     eval "k8s-$argv"
   case 2
