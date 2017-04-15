@@ -3,12 +3,14 @@ set -x PATH ~/bin $PATH
 set -x EDITOR vim
 set -x GPG_TTY (tty)
 set -x LDAPTLS_CACERT /etc/ssl/certs/ca-certificates.crt
+set -x LEDGER_FILE ~/accounts/hledger/general.journal
 
 # make sure that gpg has has the right tty
 gpg-connect-agent updatestartuptty /bye > /dev/null ^&1
 
 set fish_term24bit 1
 
+# set pure_symbol_prompt "❯\033]0;"(pwd) "|" (history | head -n1)"\007"
 set pure_color_blue (set_color "458588")
 set pure_color_cyan (set_color "83a598")
 set pure_color_gray (set_color "a89984")
@@ -27,4 +29,4 @@ set -x LESS_TERMCAP_us (printf "\e[01;32m")
 
 . "$HOME/.homesick/repos/homeshick/homeshick.fish"
 . "$HOME/.homesick/repos/homeshick/completions/homeshick.fish"
-eval (python -m virtualfish)
+eval (python -m virtualfish auto_activation)
