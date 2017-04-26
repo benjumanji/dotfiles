@@ -1,5 +1,5 @@
 function k8s
-  function k8s-usage
+	function k8s-usage
     echo "Must supply subcommand: use the tab, luke."
     functions -e k8s-usage
   end
@@ -26,18 +26,53 @@ function k8s
     functions -e k8s-refresh
   end
 
-  function k8s-switch
-  	set -xU KUBECONFIG "$HOME/.config/kubectl/$argv/config"
-    functions -e k8s-switch
+  function k8s-ctx
+    switch (count $argv)
+    case 0
+      echo "Current context: $KUBECONFIG"
+    case 1
+      set -xU KUBECONFIG "$HOME/.config/kubectl/$argv/config"
+    end
+    functions -e k8s-ctx
   end
 
+  function k8s-pf
+    set -l usage 'k8s pf (start|stop)'
+    switch (count $argv)
+    case 1
+      set -l pods 'customer-service' \
+        'loyalty-program' \
+        'membership-service' \
+        'member-service' \
+        'point-service' \
+        'svc-transaction-adapter' \
+        'svc-transaction-manager'
+
+      switch $argv[1]
+      case 'start'
+        for pod in $pods
+          systemctl --user start k8s-port-forward@$pod
+        end
+      case 'stop'
+        for pod in $pods
+          systemctl --user stop k8s-port-forward@$pod
+        end
+      case '*'
+        echo $usage
+      end
+    case '*' 
+      echo $usage
+    end
+    functions -e k8s-pf
+  end 
+
   switch (count $argv)
-  case 1
-    eval "k8s-$argv"
-  case 2
-    eval "k8s-$argv[1]" $argv[2..-1]
   case 0
     eval k8s-usage
     return 1
+  case 1
+    eval "k8s-$argv"
+  case '*'
+    eval "k8s-$argv[1]" $argv[2..-1]
   end
 end

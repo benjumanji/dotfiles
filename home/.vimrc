@@ -11,6 +11,12 @@ set hidden
 set wildmode=longest,list,full
 set wildmenu
 
+augroup titleGroup
+    autocmd!
+    autocmd BufEnter * let &titlestring = hostname() . "[vim(" . expand("%:p") . ")]"
+    autocmd VimLeave * :set t_ts=^[k^[\
+augroup END
+
 call plug#begin('~/.vim/plugged')
 Plug 'AlessandroYorba/Sierra'
 Plug 'bkad/vim-terraform'
@@ -31,6 +37,7 @@ Plug 'junegunn/vim-slash'
 Plug 'kana/vim-textobj-user'
 Plug 'kshenoy/vim-signature'
 Plug 'Lokaltog/vim-easymotion'
+Plug 'ledger/vim-ledger'
 Plug 'mxw/vim-jsx'
 Plug 'morhetz/gruvbox'
 Plug 'mustache/vim-mustache-handlebars'
@@ -119,6 +126,13 @@ augroup haskGroup
     au BufNewFile,BufRead *.hs :let g:necoghc_enable_detailed_browse = 1
 augroup END
 
+" ledger
+augroup ledgerGroup
+    autocmd!
+    " show types in autocomplete
+    au BufNewFile,BufRead *.journal :set ft=ledger
+augroup END
+
 " neocomplcache
 let g:neocomplete#enable_at_startup = 1
 " Sets minimum char length of syntax keyword.
@@ -186,3 +200,6 @@ map <Leader>h <Plug>(easymotion-linebackward)
 
 " Switch off Background Color Erase
 set t_ut=
+
+" ledger
+let g:ledger_bin = "hledger"

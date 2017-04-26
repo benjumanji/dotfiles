@@ -24,3 +24,5 @@ bspc rule -a Firefox desktop='browser'
 bspc rule -a Slack desktop='im'
 bspc rule -a Mattermost desktop='im'
 bspc rule -a crx_bikioccmkafdpakkkcpdbppfkghcmihk desktop='im'
+
+bspc rule -a zoom state=floating

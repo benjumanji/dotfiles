@@ -1,2 +1,4 @@
 [alias]
 	st = status --short --branch
+[credential]
+	helper = cache --timeout=3600
