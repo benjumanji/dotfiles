@@ -1,0 +1,27 @@
+#!/bin/bash
+
+pass-export() {
+
+  local next=key
+  local key=
+  local value=
+  
+  [[ -n "$1" ]] || { >&2 echo "Must pass pass arg"; return 63; }
+  
+  while read -r line; do
+    case $next in
+      key)
+        key=${line#'"'}
+        key=${key%'"'}
+        next=value
+        ;;
+      value)
+        value=${line#'"'}
+        value=${value%'"'}
+        next=key
+        export $key="$value"
+        ;;
+    esac
+  done < <(pass "$1" | yq 'to_entries | .[] | .key, .value')
+
+}
